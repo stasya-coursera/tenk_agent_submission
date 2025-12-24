@@ -17,15 +17,18 @@ stasya@gmail.com
 
 ## Setup Instructions 
 
-**1. Clone the repository: [TODO - add link]**
-```bash
-git clone 
-```
+**1. Clone the repository**
+
+https://github.com/stasya-coursera/tenk_agent_submission
+
 **1. Run setup:**  
 ```bash
 make setup
 ```
 **3. Activate virtual env (as per previous step instructions)**
+```bash
+source .venv/bin/activate
+```
 
 **4. Create a `.env` file.**
 ```bash
