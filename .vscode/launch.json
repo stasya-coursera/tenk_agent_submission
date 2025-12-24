@@ -1,0 +1,49 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug CLI - q0",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/debug_cli_q0.py",
+      "console": "integratedTerminal",
+      "justMyCode": false,
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src"
+      }
+    },
+    {
+      "name": "Debug CLI - q1",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/debug_cli_q1.py",
+      "console": "integratedTerminal",
+      "justMyCode": false,
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src"
+      }
+    },
+    {
+      "name": "Debug CLI - q2",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/debug_cli_q2.py",
+      "console": "integratedTerminal",
+      "justMyCode": false,
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src"
+      }
+    },
+    {
+      "name": "Debug CLI - index",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/debug_cli_index.py",
+      "console": "integratedTerminal",
+      "justMyCode": false,
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src"
+      }
+    },
+  ]
+}

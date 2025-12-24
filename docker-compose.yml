@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  back_db:
+      image: ankane/pgvector # lower then neon current, but should be ok for dev 
+      container_name: back_db 
+      ports:
+        - ${DC_PORT_PREFIX}5432:5432 # prevent conflicts
+      restart: always
+      environment:
+        - POSTGRES_DB=back_db
+        - POSTGRES_USER=postgres
+        - POSTGRES_PASSWORD=password
+      volumes:
+        - back_db_data:/var/lib/postgresql/data  # use named volumes, prevent conflicts. 
+        - ./docker/initdb:/docker-entrypoint-initdb.d # runs only if the volume is not initialized
+      healthcheck:
+        test: [ "CMD-SHELL", "pg_isready -U postgres" ]
+        interval: 10s
+        timeout: 5s
+        retries: 5
+      mem_limit: 512m  # matches neon free tier
+      cpus: 1.0        # matches neon free tier
+volumes:
+  back_db_data:
